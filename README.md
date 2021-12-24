@@ -45,9 +45,10 @@ OPTIONAL:
 5  Navigate in regedit to HKEY_CURRENT_USER\SOFTWARE\Microsoft\VBA\7.1\Common\CodeBackColors
 
    * change value to : 2 7 1 13 15 2 2 2 11 9 0 0 0 0 0 0 
+   * default : 1 0 0 7 6 0 0 0 0 0 0 0 0 0 0 0 
 
-6  change CodeForeColors to : 13 5 12 1 6 15 8 5 1 1 0 0 0 0 0 0 
+6  change CodeForeColors to : 13 5 12 1 6 15 8 5 1 1 0 0 0 0 0 0 (default : 0 0 5 0 1 10 14 0 0 0 0 0 0 0 0 0 )
 
-7  change FontFace to : Consolas
+7  change FontFace to : Consolas (default : Verdana)
 
 
