@@ -7,16 +7,17 @@ The project aims to serve as a guide for adding your own custom colors to the pa
 <img src="https://raw.githubusercontent.com/dimitrimitropulos/VBECustomColors/master/ExampleColors.png">
 
 There are two main things you need to know about getting your editor look like this:
-1. The actual hex values for the color palette are stored in the editor dll or exe (VB6.exe, VBE7.dll, etc.).  To update the colors you have to open the editor dll or exe file in a hex editor (I use HxD) and manually make the changes there.
-2. The registry holds what you can think of as a preset.  This is located somewhere around "C:\Program Files (x86)\Common Files\microsoft shared\VBA\" (in the folder "VBA7.1\VBE7.DLL" for Office 2016, for example).  You can either make changes to what colors are assigned to what syntax groups (like "Selection Text", "Execution Text", etc.) in the registry all at once, or you can do it manually in the editor ( Tools | Options | Editor Format)
+1. The actual hex values for the color palette are stored in the editor dll or exe (VB6.exe, VBE7.dll, etc.).  To update the colors you have to open the editor dll or exe file in a hex editor (I use Notepad++ with the Hex plugin, it's slow but gets the job done) and manually make the changes there.
+2. The registry holds what you can think of as a preset.  This is located somewhere around "%ProgramFiles%\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\VBA\VBA7.1".  You can either make changes to what colors are assigned to what syntax groups (like "Selection Text", "Execution Text", etc.) in the registry all at once, or you can do it manually in the editor ( Tools | Options | Editor Format)
 
 # Quick Start
-Want to get your Office 2016 editor looking like the picture above super fast?  Heres a quick and dirty guide:
+Want to get your Office 2016 editor looking like the picture above super fast? Here's a (not-so) quick and dirty guide:
 
 0. Make sure anything like excel related to the editor is closed.
 
-1. Locate your DLL: should be at `C:\Program Files (x86)\Common Files\microsoft shared\VBA\VBA7.1\VBE7.DLL`
+1. Locate your DLL: should be at `%ProgramFiles%\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\VBA\VBA7.1\VBE7.DLL`
 
+   *  If you cannot find it, run `DIR C:\VBE*.DLL /S` in cmd and give it a few minutes
    *  Make a copy and rename VBE7orig.DLL just in case you make a mistake.
 
 2. Open the DLL in HxD
@@ -41,7 +42,7 @@ Want to get your Office 2016 editor looking like the picture above super fast?  
 
 OPTIONAL:
 
-5  Navigate in regedit to HKEY_CURRENT_USER\Software\Microsoft\VBA\6.0\Common\CodeBackColors
+5  Navigate in regedit to HKEY_CURRENT_USER\SOFTWARE\Microsoft\VBA\7.1\Common\CodeBackColors
 
    * change value to : 2 7 1 13 15 2 2 2 11 9 0 0 0 0 0 0 
 
