@@ -20,7 +20,7 @@ Want to get your Office 2016 editor looking like the picture above super fast? H
    *  If you cannot find it, run `DIR C:\VBE*.DLL /S` in cmd and give it a few minutes
    *  Make a copy and rename VBE7orig.DLL just in case you make a mistake.
 
-2. Open the DLL in HxD
+2. Open the DLL in HxD (or this might be better https://hexed.it/)
 
 3. Search for the first instance of the following ( Search | Find, Data Type = "Hex-Values" Search Direction="All": 
 
